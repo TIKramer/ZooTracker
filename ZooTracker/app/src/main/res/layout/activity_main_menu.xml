@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TableLayout
+        android:layout_marginTop="40dip"
+        android:layout_width="306dp"
+        android:layout_height="481dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+        <TableRow android:layout_gravity="center_horizontal">
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="120dp"
+                android:maxHeight="120dp"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="3dp"
+                android:layout_column="0"
+
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:clickable="true"
+                android:onClick="openAnimalPage"
+                android:src="@android:drawable/ic_menu_mapmode"/>
+
+          <ImageButton
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:adjustViewBounds="true"
+              android:maxWidth="120dp"
+              android:maxHeight="120dp"
+              android:scaleType="fitCenter"
+              android:layout_marginLeft="3dp"
+              android:layout_column="1"
+
+              android:layout_weight="1"
+              android:id="@+id/imageButton"
+              android:background="#00ffffff"
+              android:clickable="true"/>
+      </TableRow>
+      <TableRow>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="Animals"
+              android:paddingLeft="50dip"
+              android:layout_gravity="right"
+              android:layout_weight="1"
+
+              />
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="Enviroments"
+              android:id="@+id/textView2"
+              android:paddingLeft="40dip"
+              android:layout_gravity="center_horizontal"
+              android:layout_weight="1"
+
+              />
+
+
+
+      </TableRow>
+      <TableRow
+          android:layout_gravity="center_horizontal"
+          android:paddingTop="20dp"
+          >
+          <ImageButton
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:adjustViewBounds="true"
+              android:maxWidth="120dp"
+              android:maxHeight="120dp"
+              android:scaleType="fitCenter"
+              android:layout_marginLeft="3dp"
+              android:layout_column="0"
+
+              android:layout_weight="1"
+              android:background="#00ffffff"
+              android:clickable="true"/>
+
+          <ImageButton
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:adjustViewBounds="true"
+              android:maxWidth="120dp"
+              android:maxHeight="120dp"
+              android:scaleType="fitCenter"
+              android:layout_marginLeft="3dp"
+              android:layout_column="1"
+
+              android:layout_weight="1"
+              android:id="@+id/CarerButton"
+              android:background="#00ffffff"
+              android:clickable="true"/>
+      </TableRow>
+      <TableRow>
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="Events"
+              android:paddingLeft="60dip"
+              android:layout_gravity="right"
+              android:layout_weight="1"
+
+              />
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="Carers"
+              android:id="@+id/CarerTxt"
+              android:paddingLeft="60dip"
+              android:layout_gravity="center_horizontal"
+              android:layout_weight="1"
+
+              />
+
+
+
+      </TableRow>
+      </TableLayout>
+</LinearLayout>
