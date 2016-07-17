@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.firebase.client.Firebase;
+
 import slipperytoes.zootracker.Unsorted.Carer;
 import slipperytoes.zootracker.Unsorted.Diet;
 import slipperytoes.zootracker.Unsorted.Enclosure;
@@ -18,13 +20,17 @@ import slipperytoes.zootracker.Unsorted.Vemenous;
 /**
  * Created by Thomas on 29/06/2016.
  */
-public class Animal_Add_Snake_Activity extends AppCompatActivity
-{
+public class Animal_Add_Snake_Activity extends AppCompatActivity {
+
+    int kaunt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_add_snake);
+
+        Firebase.setAndroidContext(this);
+
 
         //values
         Enclosure monkeyForest = new Enclosure("Monkey Forest", 20.00, 30, 2, 100, 5, 10);
@@ -46,7 +52,7 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity
 
         //Add Values to spinner
         carerSpinner.setAdapter(new ArrayAdapter<Carer>(this, android.R.layout.simple_spinner_item, carers));
-       enclosureSpinner.setAdapter(new ArrayAdapter<Enclosure>(this, android.R.layout.simple_spinner_item, enclosures));
+        enclosureSpinner.setAdapter(new ArrayAdapter<Enclosure>(this, android.R.layout.simple_spinner_item, enclosures));
 
         //Buttons listeners
         addAnimal.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +63,10 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity
     }
 
     public void createSnake(){
-         //values
+        Firebase myFirebaseRef = new Firebase("https://zoo-tracker-3e87d.firebaseio.com/xuatz/dev/random");
+        myFirebaseRef.child("message").setValue("Do you have data? You'll love Firebase.");
+
+        //values
         String[] food =  new String[] {"Fruits", "plants"};
         Diet herbivoe = new Diet("herbivoe",food);
         Location testLoc = new Location("Australia", "W.A");
@@ -76,7 +85,7 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity
         Snake name  = new Snake("Jason", enclosure, carer, 20.00, herbivoe, 10.0, 20.0, testLoc, Endangered.ENDANGERED, 20, Vemenous.HIGH);
 
 
+
+        myFirebaseRef.child(""+kaunt++).setValue("raaaaa");
     }
-
-
 }
