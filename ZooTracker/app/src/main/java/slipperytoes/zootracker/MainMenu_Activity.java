@@ -22,7 +22,5 @@ public class MainMenu_Activity extends AppCompatActivity
     public void openAnimalPage(View view) {
         Intent intent = new Intent(this, Animals_Menu_Activity.class);
         startActivity(intent);
-
     }
-
 }

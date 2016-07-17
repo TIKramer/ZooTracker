@@ -6,6 +6,15 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import slipperytoes.zootracker.Unsorted.Carer;
+import slipperytoes.zootracker.Unsorted.Diet;
+import slipperytoes.zootracker.Unsorted.Enclosure;
+import slipperytoes.zootracker.Unsorted.Endangered;
+import slipperytoes.zootracker.Unsorted.Location;
+import slipperytoes.zootracker.Unsorted.Snake;
+import slipperytoes.zootracker.Unsorted.Vemenous;
+
 /**
  * Created by Thomas on 29/06/2016.
  */

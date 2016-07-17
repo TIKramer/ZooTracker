@@ -1,4 +1,4 @@
-package slipperytoes.zootracker;
+package slipperytoes.zootracker.Unsorted;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+
+import slipperytoes.zootracker.R;
 
 /**
  * Created by Thomas on 5/07/2016.
