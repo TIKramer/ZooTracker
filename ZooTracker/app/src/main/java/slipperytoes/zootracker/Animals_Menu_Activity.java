@@ -41,15 +41,4 @@ public class Animals_Menu_Activity extends AppCompatActivity
         });
     }
 
-    public void addSnake(View view) {
-        Intent intent = new Intent(this, Animal_Add_Snake_Activity.class);
-        startActivity(intent);
-
-    }
-
-    public void listAnimals(View view) {
-        Intent intent = new Intent(this, Animal_List_Activity.class);
-        startActivity(intent);
-
-    }
 }

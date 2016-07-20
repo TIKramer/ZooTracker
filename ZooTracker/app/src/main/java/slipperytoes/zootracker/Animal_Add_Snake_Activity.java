@@ -27,7 +27,8 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animal_add_snake);
+        setContentView(R.layout.add_animal_snake);
+
 
         Firebase.setAndroidContext(this);
 
@@ -63,6 +64,7 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity {
     }
 
     public void createSnake(){
+
         Firebase myFirebaseRef = new Firebase("https://zoo-tracker-3e87d.firebaseio.com/xuatz/dev/random");
         myFirebaseRef.child("message").setValue("Do you have data? You'll love Firebase.");
 
@@ -75,8 +77,6 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity {
         Spinner carerSpinner = (Spinner) findViewById(R.id.carerSpinner);
         Spinner enclosureSpinner = (Spinner) findViewById(R.id.enclosureSpinner);
 
-
-
         //Give spinners items
         Carer carer = (Carer) ( (Spinner) findViewById(R.id.carerSpinner) ).getSelectedItem();
         Enclosure enclosure = (Enclosure) ( (Spinner) findViewById(R.id.enclosureSpinner) ).getSelectedItem();
@@ -84,8 +84,8 @@ public class Animal_Add_Snake_Activity extends AppCompatActivity {
         //Crate a snake
         Snake name  = new Snake("Jason", enclosure, carer, 20.00, herbivoe, 10.0, 20.0, testLoc, Endangered.ENDANGERED, 20, Vemenous.HIGH);
 
-
-
         myFirebaseRef.child(""+kaunt++).setValue("raaaaa");
     }
+
+
 }

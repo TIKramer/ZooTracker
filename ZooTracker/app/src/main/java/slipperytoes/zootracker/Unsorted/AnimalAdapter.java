@@ -16,6 +16,13 @@ import slipperytoes.zootracker.R;
  */
 public class AnimalAdapter extends ArrayAdapter<Animal>
 {
+
+    public static class ViewHolder
+    {
+        TextView animalName;
+        TextView animalEnclosure;
+    }
+
     public AnimalAdapter(Context context, ArrayList<Animal> animals) {
         super(context, 0, animals);
     }
@@ -25,16 +32,26 @@ public class AnimalAdapter extends ArrayAdapter<Animal>
         // Get the object from this position
         Animal animal = getItem(position);
 
+        ViewHolder viewHolder;
+
         if (view == null) {
+
+            viewHolder = new ViewHolder();
             view = LayoutInflater.from(getContext()).inflate(R.layout.animal_item, parent, false);
+
+            viewHolder.animalName = (TextView) view.findViewById(R.id.animalName);
+            viewHolder.animalEnclosure = (TextView) view.findViewById(R.id.animalEnclosure);
+
+            view.setTag(viewHolder);
         }
-        // Lookup textViews
-        TextView animalName = (TextView) view.findViewById(R.id.animalName);
-        TextView animalEnclosure = (TextView) view.findViewById(R.id.animalEnclosure);
+        else
+        {
+            viewHolder = (ViewHolder) view.getTag();
+        }
 
         // Insert data into the textViews using the current object
-        animalName.setText(animal.getName());
-        animalEnclosure.setText(animal.getEnclosure().toString());
+        viewHolder.animalName.setText(animal.getName());
+        viewHolder.animalEnclosure.setText(animal.getEnclosure().toString());
         // Return the new view
         return view;
     }
